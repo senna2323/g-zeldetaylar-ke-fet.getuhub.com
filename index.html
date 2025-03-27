@@ -52,3 +52,77 @@
     <div id="map" style="height: 500px; width: 100%;"></div>
 </body>
 </html>
+/* Ana Renk - Primary Color */
+:root {
+  --primary-color: #1E90FF; /* Canlı Mavi */
+  --secondary-color: #FFD700; /* Altın Sarısı */
+  --accent-color: #FF6347; /* Domates Kırmızısı */
+  --background-color: #FFFFFF; /* Beyaz */
+  --text-color: #333333; /* Koyu Gri */
+  --secondary-text-color: #777777; /* Açık Gri */
+}
+
+/* Web Sayfasının Temel Tasarımı */
+
+/* Arka Plan */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Başlıklar */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+}
+
+/* Paragraflar */
+p {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Linkler */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Düğmeler */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Yan Menüler veya İkincil Alanlar */
+.sidebar {
+  background-color: var(--secondary-color);
+  padding: 20px;
+}
+
+.sidebar a {
+  color: var(--background-color);
+  display: block;
+  padding: 10px 0;
+}
+
+.sidebar a:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
