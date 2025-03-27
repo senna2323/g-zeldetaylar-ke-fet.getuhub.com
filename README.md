@@ -59,3 +59,41 @@
 </html>
 
 
+<template>
+  <div>
+    <GmapMap
+      :center="center"
+      :zoom="12"
+      style="width: 100%; height: 500px"
+    >
+      <GmapMarker :position="center" />
+    </GmapMap>
+  </div>
+</template>
+
+<script>
+import { GmapMap, GmapMarker } from 'vue2-google-maps'
+
+export default {
+  data() {
+    return {
+      center: { lat: 37.7749, lng: -122.4194 }, // Varsayılan konum
+    }
+  },
+  mounted() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.center = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        }
+      })
+    }
+  },
+  components: {
+    GmapMap,
+    GmapMarker
+  }
+}
+</script>
+
